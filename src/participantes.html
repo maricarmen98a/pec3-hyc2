@@ -7,41 +7,20 @@
   </head>
   <body>
     <include src="./views/nav.html"></include>
-    <h2>Participantes</h2>
-    <!-- <div>
-        <include src="./views/participante.html" locals='{ "titulo": "Surf Rock", "descripcion": "En este festival, aparecerán grandes estrellas del rock nacional como Surf Rock.", "img": "/src/assets/images/band1.webp", "imgAlt": "Banda de música en la calle" }'></include>
-        <include src="./views/participante.html" locals='{ "titulo": "Trapwave", "descripcion": "Podrás escuchar las mejores canciones del famoso grupo Trapwave.", "img": "/src/assets/images/band4.webp", "imgAlt": "Concierto" }'></include>
-        <include src="./views/participante.html" locals='{ "titulo": "Eurotrance", "descripcion": "También, encontrarás artistas reconocidos de la música electrónica como Eurotrance.", "img": "/src/assets/images/band3.webp", "imgAlt": "Banda de música" }'></include>
-        <include src="./views/participante.html" locals='{ "titulo": "Neoclassical Dark Wave", "descripcion": "Conoce a los artistas más recientes y más prometedores del panorama internacional.", "img": "/src/assets/images/band4.webp", "imgAlt": "Concierto" }'></include>
-        <include src="./views/participante.html" locals='{ "titulo": "Horrorcore", "descripcion": "Si te va la música más fuerte, ven y conoce al grupo estadounidense Horrorcore.", "img": "/src/assets/images/banda-bg.webp", "imgAlt": "Festival de música" }'></include>
-        <include src="./views/participante.html" locals='{ "titulo": "Avant-garde Jazz", "descripcion": "¿Te gusta el jazz? Entonces, este grupo es perfecto para ti. ¡Ven a conocerlo en nuestro festival!", "img": "/src/assets/images/band3.webp", "imgAlt": "Banda de música" }'></include>
-    </div> -->
-
-    <div>
-      <div>
-        <div>
-          <button type="button"></button>
-          <button type="button"></button>
-          <button type="button"></button>
-        </div>
-        <!-- <div>
-            
-            <include src="./views/carrusel.html" locals='{ "titulo": "Día de la música electrónica", "fecha": "Viernes 16 de junio de 2022", "img": "/src/assets/images/dj.webp", "imgAlt": "Dj sobre fondo lila" }'></include>
-            <include src="./views/carrusel.html" locals='{ "titulo": "Día del pop nacional", "fecha": "Miércoles 14 de junio de 2022", "img": "/src/assets/images/singer.webp", "imgAlt": "Cantante en concierto" }'></include>
-            <include src="./views/carrusel.html" locals='{ "titulo": "Día del rock nacional", "fecha": "Domingo 18 de junio de 2022<", "img": "/src/assets/images/concierto.webp", "imgAlt": "Concierto" }'></include>
-        </div> -->
-        <button type="button">
-          <span></span>
-          <span>Anterior</span>
-        </button>
-        <button type="button">
-          <span>Siguiente</span>
-          <span></span>
-        </button>
+    <h2 class="text-center text-2xl pb-3 mb-3">Participantes</h2>
+    <div class="flex flex-col justify-center items-center laptop:px-24	">
+      <div class="flex flex-col items-center laptop:flex-wrap tablet:flex-wrap tablet:mr-10 tablet:ml-10 laptop:flex-row laptop:w-9/12 tablet:flex-row justify-center">
+          <include src="./views/participante.html" locals='{ "titulo": "Surf Rock", "descripcion": "En este festival, aparecerán grandes estrellas del rock nacional como Surf Rock.", "img": "/src/assets/images/band1.webp", "imgAlt": "Banda de música en la calle" }'></include>
+          <include src="./views/participante.html" locals='{ "titulo": "Trapwave", "descripcion": "Podrás escuchar las mejores canciones del famoso grupo Trapwave.", "img": "/src/assets/images/band4.webp", "imgAlt": "Concierto" }'></include>
+          <include src="./views/participante.html" locals='{ "titulo": "Eurotrance", "descripcion": "También, encontrarás artistas reconocidos de la música electrónica como Eurotrance.", "img": "/src/assets/images/band3.webp", "imgAlt": "Banda de música" }'></include>
+          <include src="./views/participante.html" locals='{ "titulo": "Neoclassical Dark Wave", "descripcion": "Conoce a los artistas más recientes y más prometedores del panorama internacional.", "img": "/src/assets/images/band4.webp", "imgAlt": "Concierto" }'></include>
+          <include src="./views/participante.html" locals='{ "titulo": "Horrorcore", "descripcion": "Si te va la música más fuerte, ven y conoce al grupo estadounidense Horrorcore.", "img": "/src/assets/images/banda-bg.webp", "imgAlt": "Festival de música" }'></include>
+          <include src="./views/participante.html" locals='{ "titulo": "Avant-garde Jazz", "descripcion": "¿Te gusta el jazz? Entonces, este grupo es perfecto para ti. ¡Ven a conocerlo en nuestro festival!", "img": "/src/assets/images/band3.webp", "imgAlt": "Banda de música" }'></include>
       </div>
     </div>
-    <include src="./views/carruselFotos.html"></include>
-
+    <div class="flex justify-center pb-3">
+      <include src="./views/carrusel.html"></include>
+    </div>
     <include src="./views/googleMaps.html"></include>
     <include src="./views/footer.html"></include>
     <script type="module" src="./assets/scripts/main.js"></script>

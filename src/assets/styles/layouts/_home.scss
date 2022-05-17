@@ -3,7 +3,6 @@
 }
 body {
   flex-direction: column;
-  font-family: $font-family-sans-serif;
   font-size: 16px;
   line-height: 24px;
   background: $bg;
@@ -41,6 +40,13 @@ body {
 .max-w-190 {
   max-width: 190px;
 }
+.max-w-300 {
+  max-width: 19rem;
+}
+.margin-15 {
+  margin-left: 15%;
+  margin-right: 15%;
+}
 .max-h-120 {
   max-width: 120px;
 }
@@ -71,22 +77,16 @@ body {
 }
 @layer components {
   .img-grid {
-    @apply w-170 p-0 m-2.5 shadow-xl relative;
+    @apply w-170 p-0 shadow-xl relative;
   }
-}
-@layer components {
   .flip-box {
     @apply relative text-center transition-transf h-full	w-full flip;
   }
-}
-@layer components {
   .flip-box-back {
-    @apply absolute back-card-hidden bg-black text-white h-32 w-52	mt-1 transform-rotate;
+    @apply absolute back-card-hidden bg-black text-white h-32 w-40	mt-1 transform-rotate;
   }
-}
-@layer components {
   .flip-box-back-tablet {
-    @apply h-190 w-72 pt-8 ;
+    @apply h-44 w-64 pt-8 ;
   }
 }
 .zoom:hover {
@@ -101,22 +101,19 @@ body {
   grid-template-columns: 300px 300px 300px 300px;
   grid-template-rows: 250px 50px 250px;
 }
-/* .carousel-open:checked+.carousel-item {
+.carousel-open:checked+.carousel-item {
   position: static;
   opacity: 100;
 }
-
 .carousel-item {
   -webkit-transition: opacity 0.6s ease-out;
   transition: opacity 0.6s ease-out;
 }
-
 #carousel-1:checked~.control-1,
 #carousel-2:checked~.control-2,
 #carousel-3:checked~.control-3 {
   display: block;
 }
-
 .carousel-indicators {
   list-style: none;
   margin: 0;
@@ -128,10 +125,8 @@ body {
   text-align: center;
   z-index: 10;
 }
-
 #carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
 #carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
 #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
-  color: #2b6cb0;
-  Set to match the Tailwind colour you want the active one to be
-} */
+  color: black;
+} 
