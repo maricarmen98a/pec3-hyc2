@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  flex-direction: column;
+  font-family: $font-family-sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  background: $bg;
+  color: white;
+}
+.faded-color {
+  color: rgba(255, 255, 255, 0.73);
+}
+.max-w-25 {
+  max-width: 25px;
+}
+.max-w-50 {
+  max-width: 50px;
+}
+.max-h-500 {
+  max-height: 500px;
+}
+.w-170 {
+  width: 170px;
+}
+.w-250 {
+  width: 250px;
+}
+.h-170 {
+  height: 170px;
+}
+.h-190 {
+  height: 190px;
+}
+.font-festival {
+  font-family: "Ms Madi", cursive;
+  font-size: 2.6rem;
+  font-weight: 800;
+}
+.max-w-190 {
+  max-width: 190px;
+}
+.max-h-120 {
+  max-width: 120px;
+}
+.min-h-950 {
+  min-height: 950px;
+}
+.perspective-1000 {
+  perspective: 1000px;
+}
+.transition-transf {
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+.rows-6-diff {
+  grid-template-rows: 140px 140px 50px 50px 140px 140px;
+}
+.back-card-hidden {
+  backface-visibility: hidden;
+}
+.transform-rotate {
+  transform: rotateY(180deg);
+}
+.flip:hover {
+  transform: rotateY(180deg);
+}
+.box-shadow {
+  box-shadow: 10px 10px 5px rgba(107, 109, 110, 0.641);
+}
+@layer components {
+  .img-grid {
+    @apply w-170 p-0 m-2.5 shadow-xl relative;
+  }
+}
+@layer components {
+  .flip-box {
+    @apply relative text-center transition-transf h-full	w-full flip;
+  }
+}
+@layer components {
+  .flip-box-back {
+    @apply absolute back-card-hidden bg-black text-white h-32 w-52	mt-1 transform-rotate;
+  }
+}
+@layer components {
+  .flip-box-back-tablet {
+    @apply h-190 w-72 pt-8 ;
+  }
+}
+.zoom:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.grid-tablet {
+  grid-template-columns: 250px 150px 250px;
+  grid-template-rows: 250px 70px 70px 250px;
+}
+.grid-laptop {
+  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-rows: 250px 50px 250px;
+}
+/* .carousel-open:checked+.carousel-item {
+  position: static;
+  opacity: 100;
+}
+
+.carousel-item {
+  -webkit-transition: opacity 0.6s ease-out;
+  transition: opacity 0.6s ease-out;
+}
+
+#carousel-1:checked~.control-1,
+#carousel-2:checked~.control-2,
+#carousel-3:checked~.control-3 {
+  display: block;
+}
+
+.carousel-indicators {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 10;
+}
+
+#carousel-1:checked~.control-1~.carousel-indicators li:nth-child(1) .carousel-bullet,
+#carousel-2:checked~.control-2~.carousel-indicators li:nth-child(2) .carousel-bullet,
+#carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
+  color: #2b6cb0;
+  Set to match the Tailwind colour you want the active one to be
+} */
